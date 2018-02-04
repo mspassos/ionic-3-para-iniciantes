@@ -27,6 +27,8 @@ export class FeedPage {
     time_comment: '11h ago'
   };
 
+  public list_videos = new Array<any>();
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private moovieProvider: MoovieProvider) {
   }
 
@@ -38,6 +40,7 @@ export class FeedPage {
     this.moovieProvider.getLatestMovies().subscribe(
       data => {
         console.log(data);
+        this.list_videos = (data as any).results;
       }, error => {
         console.log(error);
       }

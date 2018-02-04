@@ -14,20 +14,20 @@
 
 
 <ion-content padding>
-  <ion-card>
+  <ion-card *ngFor="let film of list_videos">
 
     <ion-item>
       <ion-avatar item-start>
         <img src="assets/imgs/avatar.png">
       </ion-avatar>
-      <h2 class="feed_title">{{ object_feed.title }}</h2>
-      <p class="feed_date">{{ object_feed.date }}</p>
+      <h2 class="feed_title">{{ film.original_title }}</h2>
+      <p class="feed_date">{{ film.release_date }}</p>
     </ion-item>
 
-    <img src="assets/imgs/feed.png">
+    <img [src]="'https://image.tmdb.org/t/p/w500/' + film.backdrop_path">
 
     <ion-card-content>
-      <p>{{ object_feed.description }}</p>
+      <p>{{ film.overview }}</p>
     </ion-card-content>
 
     <ion-row>
