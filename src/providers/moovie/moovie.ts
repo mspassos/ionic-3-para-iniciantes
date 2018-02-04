@@ -14,4 +14,8 @@ export class MoovieProvider {
     console.log('Hello MoovieProvider Provider');
   }
 
+  getLatestMovies() {
+    return this.http.get('http://')
+  }
+
 }
