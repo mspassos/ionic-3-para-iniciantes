@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FeedPageModule } from '../pages/feed/feed.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
 import { HttpModule } from '@angular/http'
+import { HttpClientModule } from '@angular/common/http';
 import { MoovieProvider } from '../providers/moovie/moovie';
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MoovieProvider } from '../providers/moovie/moovie';
     IonicModule.forRoot(MyApp),
     FeedPageModule,
     IntroPageModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
