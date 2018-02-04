@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 
 /*
   Generated class for the MoovieProvider provider.
@@ -19,7 +18,7 @@ export class MoovieProvider {
   }
 
   getLatestMovies() {
-    return this.http.get(this.baseApiPath + '/movie/latest?api_key=' + this.apiKey);
+    return this.http.get(this.baseApiPath + '/movie/popular?api_key=' + this.apiKey);
   }
 
 }
